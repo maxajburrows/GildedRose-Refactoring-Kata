@@ -22,7 +22,8 @@ class GildedRoseTest {
             new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20),
             new Item("Backstage passes to a TAFKAL80ETC concert", 10, 49),
             new Item("Backstage passes to a TAFKAL80ETC concert", 5, 49),
-            new Item("Conjured Mana Cake", 3, 6) };
+            new Item("Conjured Mana Cake", 3, 6),
+            new Item("Conjured More Cake", 1, 24) };
         gildedRose = new GildedRose(items);
     }
 
@@ -42,6 +43,9 @@ class GildedRoseTest {
 
         assertEquals(2, gildedRose.items[8].sellIn);
         assertEquals(4, gildedRose.items[8].quality);
+
+        assertEquals(0, gildedRose.items[9].sellIn);
+        assertEquals(22, gildedRose.items[9].quality);
     }
 
     @Test
@@ -60,6 +64,9 @@ class GildedRoseTest {
 
         assertEquals(1, gildedRose.items[8].sellIn);
         assertEquals(2, gildedRose.items[8].quality);
+
+        assertEquals(-1, gildedRose.items[9].sellIn);
+        assertEquals(18, gildedRose.items[9].quality);
     }
 
     @Test
@@ -78,6 +85,9 @@ class GildedRoseTest {
 
         assertEquals(0, gildedRose.items[8].sellIn);
         assertEquals(0, gildedRose.items[8].quality);
+
+        assertEquals(-2, gildedRose.items[9].sellIn);
+        assertEquals(14, gildedRose.items[9].quality);
     }
 
     @Test
